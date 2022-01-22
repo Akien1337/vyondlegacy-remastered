@@ -1,0 +1,246 @@
+{
+	"GET": {
+		"/index.html": {
+			"headers": {
+				"Location": "/yourvideos"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/$": {
+			"headers": {
+				"Location": "/yourvideos"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/videomaker.html": {
+			"headers": {
+				"Location": "/videomaker"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/yourvideos.html": {
+			"headers": {
+				"Location": "/yourvideos"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/list.html": {
+			"headers": {
+				"Location": "/notsupported.html"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/legacylist": {
+			"headers": {
+				"Location": "/notsupported.html"
+			},
+			"statusCode": 302,
+			"content": ""
+		},
+		"/goapi/getAssetTags": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "111"
+		},
+		"/crossdomain.xml": {
+			"headers": {
+				"Content-Type": "text/x-cross-domain-policy"
+			},
+			"content": "<cross-domain-policy><allow-access-from domain=\"*\"/></cross-domain-policy>"
+		},
+		"/cc.swf": {},
+		"/go_full.swf": {},
+		"/favicon.ico": {},
+		"/char-default\\.png": {
+			"headers": {
+				"Content-Type": "image/png"
+			},
+			"content": ""
+		},
+		"/ajax/sessionCheck": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"statusCode": 200,
+			"content": "OK"
+		},
+		"/html/([^?]+html).*": {
+			"contentReplace": true,
+			"regexLink": "/html/$1",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/html/([^?]+).*": {
+			"regexLink": "/html/$1",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/videomaker/full/([^?]+).*": {
+			"regexLink": "/html/videomaker/full/$1",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/videomaker": {
+			"regexLink": "/html/videomaker.html",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/charactercreator/([^?]+)": {
+			"regexLink": "/html/charactercreator/$1.html",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/videomaker/full/([^?]+)": {
+			"regexLink": "/html/videomaker/full/$1.html",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/videomaker/full/businessfriendly": {
+			"regexLink": "/html/videomaker/full/businessfriendly.html",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/yourvideos": {
+			"regexLink": "/html/videolist.html",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/([^?]+html)": {
+			"contentReplace": true,
+			"regexLink": "/html/$1",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"/([^?]+)": {
+			"regexLink": "/html/$1",
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		}
+	},
+	"POST": {
+		"/goapi/getUserWatermarks/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "<?xml encoding=\"UTF-8\"?><watermarks><current/><preview/></watermarks>"
+		},
+		"/goapi/getUserFontList/": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/goapi/getMovieInfo/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "<?xml encoding=\"UTF-8\"?><watermarks><watermark style=\"normal\"/></watermarks>"
+		},
+		"/api_v2/asset/get": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/goapi/rebuildTTS/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "1"
+		},
+		"/goapi/getWaveform/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "1"
+		},
+		"/goapi/saveWaveform/": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "1"
+		},
+		"/ajax/sessionCheck": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"statusCode": 200,
+			"content": "OK"
+		},
+		"/api_v2/studio_preference/get": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[{\"category\":{\"favorite\":{\"template\":{\"business\":[\"office\"]}},\"featured\":{\"template\":{\"business\":[]}}}}]}"
+		},
+		"/api_v2/text_component/get_list": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/text_component/add": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/assets/team": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/assets/shared": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/([^?]+)": {
+			"regexLink": "api_v2/$1",
+			"headers": {
+				"Content-Type": "application/json"
+			}
+		},
+		"/player": {
+			"headers": {
+				"Location": "/player"
+			}
+		},
+		"/ajax/saveUserProp": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"suc\":completed,\"thumbnail\":\"https:\/\/localhost:4343\/movie_thumbs\/m-278.png\",\"subtype\":\"prop\"}"
+		},
+		"/ajax/myvideos": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			},
+			"content": "<div class=\"grid video-listing-grid hide-folders folder-access\" id=\"video-listing-grid\"><div class=\"grid-viewport video-listing\" id=\"videos\"> <table class=\"table table-hover table-generic\"><thead><tr><td class=\"td-thumbnail\"></td><td class=\"td-title\">Video Title</td><td class=\"td-date\">Last Modified</td><td class=\"td-tools hidden-mobile\"></td></tr></thead><tbody></tbody><tfoot><tr><td colspan=\"127\"><a id=\"load_more\" href=\"javascript:;\">LOAD MORE...</a></td></tr></tfoot></table> </div></div></div>"
+		}
+	},
+	"pages": {
+		"/go_full": "<iframe style='display:none'name='dummy'></iframe><form style='display:none'id='uploadbanner'enctype='multipart/form-data'method='post'action='/ajax/uploadAsset'target='dummy'><input type='text'name='params'/><input id='fileupload'name='import'type='file'onchange='importComplete(this)'accept='.mp3,.wav,.png,.jpg'/><input type='submit'value='submit'id='submit'/></form><div id=\"previewPlayerContainer\" style=\"display:none\"><div class=\"preview-player\" id=\"previewPlayer\"><h2>Preview Video</h2><div id=\"playerdiv\"></div><div id=\"h5-playerdiv\"></div><div class=\"buttons clearfix\"><button class=\"preview-button edit\" type=\"button\" onclick=\"switchBackToStudio()\">Back to editing</button></div><a class=\"close_btn\" href=\"#\" onclick=\"switchBackToStudio();return false\">×</a></div></div></div><script>interactiveTutorial={neverDisplay:function(){return true}};function studioLoaded(a){console.log(a)}function savePreviewData(b){previewPlayerTempData=b}function retrievePreviewPlayerData(){var b=previewPlayerTempData;previewPlayerTempData=\"\";return b}function switchBackToStudio(){$(\"#previewPlayerContainer\").hide();$(\"#playerdiv\").empty();$(\"#video_maker\").height(\"100%\");$(\"#video_maker\").width(\"100%\")}function loadLegacyPreview(){if(movieDataXmlStr===null){return}savePreviewData(movieDataXmlStr);createPreviewPlayer(\"playerdiv\",{height:360,width:640,player_url:\"https:\/\/akien1337.github.io\/vyondlegacyremastered-assets\/animation\/414827163ad4eb60\/player.swf\",quality:\"high\",wmode:\"transparent\"},{movieId:flashvars[\"presaveId\"],ut:\"60\",movieLid:\"13\",apiserver:\"/\",copyable:\"0\",isPublished:\"0\",ctc:\"go\",tlang:\"en_US\",autostart:\"1\",appCode:\"go\",is_slideshow:\"0\",originalId:\"0\",is_emessage:\"0\",isEmbed:\"1\",refuser:\"\",utm_source:\"\",uid:\"\",isTemplate:\"1\",showButtons:\"1\",chain_mids:\"\",showshare:\"1\",averageRating:\"\",ratingCount:\"\",numContact:0,isInitFromExternal:1,storePath:\"https:\/\/akien1337.github.io\/vyondlegacyremastered-assets\/store/3a981f5cb2739137\/<store>\",clientThemePath:\"https:\/\/akien1337.github.io\/vyondlegacyremastered-assets\/static\/ad44370a650793d9\/<client_theme>\",startFrame:previewStartFrame});$(\"body\").css(\"background-color: #0f0f0f\");$(\"#video_maker\").height(\"1px\");$(\"#video_maker\").width(\"1px\")}function checkPreviewServer(){return previewPlayer._connectionState===PreviewPlayerConstants.STATE_READY}function initPreviewPlayer(d,c,b,a){movieDataXmlStr=d;previewStartFrame=c;filmXmlStr=d.split(\"<filmxml>\")[1].split(\"</filmxml>\")[0];if(typeof c==\"undefined\"){c=1}else{c=Math.max(1,parseInt(c))}document.getElementById(\"previewPlayerContainer\").setAttribute(\"style\",\"\");loadLegacyPreview();if(!checkPreviewServer()&&(previewPlayerRetryCount>0)){previewPlayer.connect();previewPlayerRetryCount--}}function exitStudio(){window.location=\"html/list.html\"}const fu=document.getElementById('fileupload'),sub=document.getElementById('submit');function showImporter(){fu.click()};function importComplete(obj){const file=obj.files[0];if(file!=undefined){const ext=file.name.substring(file.name.lastIndexOf('.')+1);var params=flashvars.presaveId+'.';if(ext=='mp3'||ext=='wav'){var c;while(c!='vo'&&c!='se'&&c!='mu'){c=prompt('Would you like to upload this as a voiceover (\"vo\"), sound effect (\"se\"), or as music (\"mu\")?').toLowerCase()}params+=c}else if(ext=='jpg'||ext=='png'){var c;while(c!='bg'&&c!='prop'){c=prompt('Would you like to upload this as a background (\"bg\") or as a prop (\"prop\")?').toLowerCase()}params+=c}obj.parentElement.firstChild.value=params+'.'+ext;sub.click();return true}};</script>",
+		"/go_full/tutorial": "<iframe style='display:none'name='dummy'></iframe><form style='display:none'id='uploadbanner'enctype='multipart/form-data'method='post'action='/ajax/uploadAsset'target='dummy'><input type='text'name='params'/><input id='fileupload'name='import'type='file'onchange='importComplete(this)'accept='.mp3,.wav,.png,.jpg'/><input type='submit'value='submit'id='submit'/></form><div id=\"previewPlayerContainer\" style=\"display:none\"><div class=\"preview-player\" id=\"previewPlayer\"><h2>Preview Video</h2><div id=\"playerdiv\"></div><div id=\"h5-playerdiv\"></div><div class=\"buttons clearfix\"><button class=\"preview-button edit\" type=\"button\" onclick=\"switchBackToStudio()\">Back to editing</button><button class=\"preview-button save\" type=\"button\" onclick=\"publishStudio()\">Save Now</button> </div><a class=\"close_btn\" href=\"#\" onclick=\"switchBackToStudio();return false\">×</a></div></div></div><script>interactiveTutorial={neverDisplay:function(){return false}};function studioLoaded(a){console.log(a)}function savePreviewData(b){previewPlayerTempData=b}function retrievePreviewPlayerData(){var b=previewPlayerTempData;previewPlayerTempData=\"\";return b}function switchBackToStudio(){$(\"#previewPlayerContainer\").hide();$(\"#playerdiv\").empty();$(\"#video_maker\").height(\"100%\");$(\"#video_maker\").width(\"100%\")}function loadLegacyPreview(){if(movieDataXmlStr===null){return}savePreviewData(movieDataXmlStr);createPreviewPlayer(\"playerdiv\",{height:360,width:640,player_url:\"https://akien1337.github.io/vyondlegacyremastered-assets/animation/414827163ad4eb60/player.swf\",quality:\"high\",wmode:\"transparent\"},{movieId:flashvars[\"presaveId\"],ut:\"60\",movieLid:\"13\",apiserver:\"/\",copyable:\"0\",isPublished:\"0\",ctc:\"go\",tlang:\"en_US\",autostart:\"1\",appCode:\"go\",is_slideshow:\"0\",originalId:\"0\",is_emessage:\"0\",isEmbed:\"1\",refuser:\"\",utm_source:\"\",uid:\"\",isTemplate:\"1\",showButtons:\"1\",chain_mids:\"\",showshare:\"1\",averageRating:\"\",ratingCount:\"\",numContact:0,isInitFromExternal:1,storePath:\"https://akien1337.github.io/vyondlegacyremastered-assets/store/3a981f5cb2739137/<store>\",clientThemePath:\"https://akien1337.github.io/vyondlegacyremastered-assets/static/ad44370a650793d9/<client_theme>\",startFrame:previewStartFrame});$(\"body\").css(\"background-color: #0f0f0f\");$(\"#video_maker\").height(\"1px\");$(\"#video_maker\").width(\"1px\")}function checkPreviewServer(){return previewPlayer._connectionState===PreviewPlayerConstants.STATE_READY}function initPreviewPlayer(d,c,b,a){movieDataXmlStr=d;previewStartFrame=c;filmXmlStr=d.split(\"<filmxml>\")[1].split(\"</filmxml>\")[0];if(typeof c==\"undefined\"){c=1}else{c=Math.max(1,parseInt(c))}document.getElementById(\"previewPlayerContainer\").setAttribute(\"style\",\"\");loadLegacyPreview();if(!checkPreviewServer()&&(previewPlayerRetryCount>0)){previewPlayer.connect();previewPlayerRetryCount--}}function exitStudio(){window.location=\"html/list.html\"};</script>",
+		"/character_creator": "<script>function characterSaved(){window.location='/videomaker'}</script>",
+		"/cc": "<script>function characterSaved(){window.location='/videomaker'}</script>"
+	}
+}
